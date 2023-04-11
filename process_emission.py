@@ -25,7 +25,7 @@ def lambda_handler(event, context):
     client.publish(
         topic = "iot/Vehicle_" + vehicle_val,
         queueFullPolicy="AllOrException",
-        payload = json.dumps({"max_co2": max_co2_val, "time_stamp": time_stamp, "vehicle": vehicle_val }),
+        payload = json.dumps({"max_co2": max_co2_val, "time_st": time_st, "vehicle": vehicle_val }),
     )
 
     return
